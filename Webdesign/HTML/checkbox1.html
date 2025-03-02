@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title> Check Box Demo</title>
+	</head>
+<body>
+	<script>
+		function selectedvalues()
+		{
+			if(document.getElementById("c1").checked==true)
+			{
+				document.getElementById("t1").value="SSLC";
+			}
+		}
+	</script>
+	Select Your Qualification
+	<br>
+	<input type="checkbox" name="c1" id="c1" value="sslc"> SSLC
+	<br>
+	<input type="checkbox" name="c2" id="c2" value="plus2"> +2
+	<br>
+	<input type="checkbox" name="c3" id="c3" value="UG"> UG
+	<br>
+	<input type="button" name="b1" id="b1" value="show" onclick="selectedvalues()"> 
+	<br>
+	<br>
+	<input type="text" name="t1" id="t1">
+</body>
+</html>

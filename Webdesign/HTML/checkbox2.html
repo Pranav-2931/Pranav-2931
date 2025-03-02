@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<title> Check Box Demo</title>
+	</head>
+
+	<body>
+		<script>
+		function selfun()
+		{
+			var a="";
+			if(document.getElementById("c1").checked==true)
+			{
+				a="SSLC";
+			}
+			if(document.getElementById("c2").checked==true)
+			{
+				a=a+"+2";
+			}
+			if(document.getElementById("c3").checked==true)
+			{
+				a=a+"UG";
+			}
+			document.getElementById("t1").value=a;
+		}
+
+		function onug()
+		{
+			if(document.getElementById("c3").checked==true)
+			{
+				document.getElementById("c1").checked=true;
+				document.getElementById("c2").checked=true;
+
+			}
+			
+
+		}
+		
+		function onplustwo()
+		{
+			if(document.getElementById("c2").checked==true)
+			{
+				document.getElementById("c1").checked=true;
+
+			}
+			if(document.getElementById("c2").checked==false)
+			{
+				document.getElementById("c3").checked=false;
+
+			}
+		}
+		
+		function onsslc()
+		{
+			if(document.getElementById("c1").checked==false)
+			{
+				document.getElementById("c2").checked=false;
+				document.getElementById("c3").checked=false;
+
+			}
+		}
+
+		</script>
+		Select you Qualification
+		<br>
+		<input type="checkbox" name="c1" id="c1" value="sslc" onclick="onsslc()">SSLC
+		<br>
+		<input type="checkbox" name="c2" id="c2" value="plus2" onclick="onplustwo()">+2
+		<br>
+		<input type="checkbox" name="c3" id="c3" value="ug" onclick="onug()">UG
+		<br>
+		<input type="button" name="b1" id="b1" value="Show" onclick="selfun()">
+		<br>
+		<input type="text" name="t1" id="t1">
+		
+	</body>
+</html>

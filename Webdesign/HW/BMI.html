@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <h2>BMI Calculator</h2>
+    Weight (kg): <input type="number" id="weight">
+    <br><br>
+    Height (m): <input type="number" id="height">
+    <br><br>
+    <button onclick="calculateBMI()">Calculate BMI</button>
+    <br><br>
+    <div id="result"></div>
+
+    <script>
+        function calculateBMI() {
+            var weight = document.getElementById('weight').value;
+            var height = document.getElementById('height').value;
+            var bmi = weight / (height * height);
+            var result = Math.round(bmi * 100) / 100; // Rounded to two decimal places
+            document.getElementById('result').textContent = 'Your BMI is ' + result;
+        }
+    </script>
+</body>
+</html>
